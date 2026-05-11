@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import Slider from "./Slider";
 import ContactSection from "./ContactSection";
-
+import cvPdf from "../assets/cv-marine.pdf";
 import portrait from "../images/IMG_0659.png";
 import img from "../images/8B153580-FED0-4269-9F06-CDBB6BD960EA-2.jpg";
 import flecheOrange from "../images/flech-orange.png";
@@ -77,9 +77,15 @@ function DesktopVersion() {
     <div className="about-content">
       
 
-<button className="cv-button">
+<a
+  href={cvPdf}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="cv-button"
+>
+
   TELECHARGER MON CV
-</button>
+</a>
 
   
       <p className="about-label">À PROPOS</p>
@@ -256,9 +262,9 @@ Elle m’aide à apprendre plus vite, explorer de nouvelles idées <br/>et dépa
             <p>marineags</p>
           </a>
 
-          <a href="mailto:agsmarine23@gmail.com" className="contact-card">
+          <a href="mailto:marine.agse@gmail.com" className="contact-card">
             <img src="/icons/icons8-mail-48.png" alt="Email" />
-            <p>agsmarine23@gmail.com</p>
+            <p>marine.agse@gmail.com</p>
           </a>
 
           <a href="tel:+33638829826" className="contact-card">
