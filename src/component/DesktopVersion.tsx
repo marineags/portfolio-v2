@@ -13,9 +13,9 @@ import git from "../images/icons8-git-48.png";
 import github from "../images/icons8-github-50.png";
 import javascript from "../images/icons8-javascript-48.png";
 import spring from "../images/icons8-logo-de-printemps-48.png";
-import typescript from "../images/icons8-vite-48.png";
+import typescript from "../images/icons8-manuscrit-48.png";
 import react from "../images/icons8-réagir-40.png";
-import vite from "../images/icons8-manuscrit-48.png";
+import vite from "../images/icons8-vite-48.png";
 import tailwind from "../images/icons8-tailwind-css-48.png";
 import sql from "../images/icons8-sql-48.png";
 import angular from "../images/icons8-angularjs-64.png";
@@ -57,9 +57,7 @@ function DesktopVersion() {
 
             <p className="small-title">DÉTERMINÉE</p>
 
-            <p className="small-text">
-             MOTIVÉE
-            </p>
+
 
          
 
@@ -109,7 +107,7 @@ L’évolution constante de ce secteur correspond pleinement à mon envie de dé
               c'est pas vraiment moi,<br />
               c'est une image generer par une IA à partir de mes photos, mais ça me ressemble pas mal quand même non ?
             </p>
-<img className="fleche-orange" src={flecheOrange} alt="Portrait Marine" />
+
     <img className="fleche-noir" src={flecheNoir} alt="Portrait Marine" />
     </div>
   </div>
@@ -119,6 +117,7 @@ L’évolution constante de ce secteur correspond pleinement à mon envie de dé
           id="projects"
           className="projets-section"
         >
+          <img className="fleche-orange" src={flecheOrange} alt="Portrait Marine" />
        <div className="robot-card">
   <video
     className="robot-video"
@@ -149,7 +148,7 @@ L’évolution constante de ce secteur correspond pleinement à mon envie de dé
              Mon rapport avec l’IA ???<br/>
 Elle m’aide à apprendre plus vite, explorer de nouvelles idées <br/>et dépasser certaines limites techniques ou créatives.
             </p>
-         <h1 className="orange-title3">ChatGPT</h1>
+         <h1 className="orange-title3">CLAUDE</h1>
 
 
 

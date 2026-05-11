@@ -1,5 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;600;700;900&family=Pacifico&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #D8D8D8;
+  color: #111;
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
 
 .desktop-version {
   display: block;
@@ -10,18 +29,29 @@
   width: 100%;
 }
 
-#home {
-  position: relative;
-  height: 100vh;
-  min-height: 100vh;
-  overflow: visible;
-}
-
 .mobile-version {
   display: none;
 }
 
+#home,
+#projects,
+#contact {
+  position: relative;
+  overflow: hidden;
+  background: #D8D8D8;
+}
 
+#home {
+  min-height: 100vh;
+}
+
+#projects {
+  min-height: 300vh;
+}
+
+#contact {
+  min-height: 100vh;
+}
 
 @keyframes float {
   0% { transform: translateY(0px); }
@@ -29,29 +59,11 @@
   100% { transform: translateY(0px); }
 }
 
-body {
-  margin: 0;
-  background: #D8D8D8;
-  font-family: "Montserrat", sans-serif;
-}
-/* page dacceuil -------------- */
-#home {
-  position: relative;
-  height: 100vh; 
-  overflow: visible;
-}
-#contact {
-  position: relative;
-  height: 100vh; 
-  overflow: visible;
-}
-
-
-
-/* deco */
+/* page accueil -------------- */
 .top-line {
   position: absolute;
   top: 80px;
+  left: 0;
   width: 100%;
   height: 2px;
   background: #ff6a00;
@@ -60,8 +72,8 @@ body {
 
 .barcode {
   position: absolute;
-  top: 0px;
-  right: 1100px;
+  top: 0;
+  right: 75%;
   width: 200px;
   height: 250px;
   z-index: 10;
@@ -74,40 +86,38 @@ body {
   );
 }
 
-
 .big-shape {
   position: absolute;
-  left: 120px;
-  top: 404px;
+  left: 7vw;
+  top: 51vh;
   font-family: "Anton", sans-serif;
-  font-size: 650px;
+  font-size: clamp(300px, 40vw, 650px);
   color: #000;
   line-height: 1;
   z-index: 1;
 }
 
-
 .black-band {
   position: absolute;
-  top: 450px;
+  top: 54vh;
   right: 0;
   width: 70%;
   height: 165px;
   background: #000;
   z-index: 2;
 }
-/* images */
+
 .person {
   position: absolute;
   top: 45px;
   left: 40%;
-  width: 600px;
+  width: min(600px, 38vw);
   height: 570px;
   object-fit: cover;
   filter: grayscale(1);
   z-index: 4;
 }
-/* text */
+
 .text {
   position: absolute;
   font-size: 15px;
@@ -118,9 +128,9 @@ body {
 }
 
 .text2 {
-  top: 930px;
-  left: 100px;
   position: absolute;
+  top: 110svh;
+  left: 170px;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.2;
@@ -129,12 +139,9 @@ body {
   text-align: center;
 }
 
-
-
 .text-left {
   top: 350px;
   left: 200px;
-  
 }
 
 .text-top {
@@ -157,20 +164,20 @@ body {
   z-index: 6;
 }
 
-.small-title3 {
+.small-title2 {
   position: absolute;
-  left: 1300px;
-  bottom: 450px;
+  left: 15px;
+  top: 86vh;
   color: white;
   font-family: "Anton", sans-serif;
   font-size: 28px;
   z-index: 6;
 }
 
-.small-title2 {
+.small-title3 {
   position: absolute;
-  left: 15px;
- top: 860px;
+  right: 7vw;
+  bottom: 450px;
   color: white;
   font-family: "Anton", sans-serif;
   font-size: 28px;
@@ -190,28 +197,28 @@ body {
 .orange-title {
   position: absolute;
   left: 30%;
-  top: 320px;
+  top: 390px;
   margin: 0;
- font-family: "Mrs Saint Delafield", cursive;
-  font-size: 300px;
-  font-weight: 400;
-  color: #ff5a00;
-  transform: rotate(-17deg);
-  z-index: 8;
-}
-.orange-title2 {
-  position: absolute;
-  left: 59%;
-  top: 450px;
-  margin: 0;
- font-family: "Mrs Saint Delafield", cursive;
-  font-size: 210px;
+  font-family: "Mrs Saint Delafield", cursive;
+  font-size: clamp(120px, 16vw, 300px);
   font-weight: 400;
   color: #ff5a00;
   transform: rotate(-17deg);
   z-index: 8;
 }
 
+.orange-title2 {
+  position: absolute;
+  left: 59%;
+  top: 490px;
+  margin: 0;
+  font-family: "Mrs Saint Delafield", cursive;
+  font-size: clamp(100px, 12vw, 210px);
+  font-weight: 400;
+  color: #ff5a00;
+  transform: rotate(-17deg);
+  z-index: 8;
+}
 
 .main-title {
   position: absolute;
@@ -219,53 +226,40 @@ body {
   bottom: -35px;
   margin: 0;
   font-family: "Anton", sans-serif;
-  font-size: 131px;
+  font-size: clamp(7px, 13vw, 132px);
   letter-spacing: -3px;
   color: #000;
   z-index: 6;
   font-weight: 900;
 }
 
-/* fin page acceuil -------------- */ 
-
-
-/* NAVBAR GLOBALE */
+/* NAVBAR GLOBALE ------------------- */
 .navbar {
   position: fixed;
   top: 25px;
   left: 0;
   right: 0;
   z-index: 9999;
-
   display: flex;
   justify-content: center;
 }
 
-/* CONTENEUR GLASS */
 .navbar-container {
   width: 98%;
   max-width: 1900px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 12px 25px;
-
-  /* effet glass */
   background: rgba(20, 20, 20, 0.6);
   backdrop-filter: blur(12px);
-
   border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.15);
-
-  /* effet luxe */
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.4),
     inset 0 0 20px rgba(255, 255, 255, 0.05);
 }
 
-/* LOGO */
 .logo {
   color: white;
   font-size: 14px;
@@ -274,13 +268,11 @@ body {
   text-transform: uppercase;
 }
 
-/* NAV */
 .nav-links {
   display: flex;
   gap: 25px;
 }
 
-/* LIENS */
 .nav-links a {
   position: relative;
   color: white;
@@ -291,12 +283,10 @@ body {
   transition: all 0.3s ease;
 }
 
-/* HOVER ELEGANT */
 .nav-links a:hover {
   opacity: 1;
 }
 
-/* petit trait animé en dessous */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -312,15 +302,14 @@ body {
   width: 100%;
 }
 
-/* fin NAVBAR GLOBALE------------------- */
-
 /* presentation page -------------------- */
 .about-section {
-
-  min-height: vh;
+  position: relative;
+  min-height: 100vh;
   padding: 120px 8%;
   background: #D8D8D8;
   color: #111;
+  overflow: hidden;
 }
 
 .about-grid {
@@ -329,28 +318,27 @@ body {
   gap: 60px;
   align-items: center;
 }
-/* images */
+
 .fleche-orange {
   position: absolute;
-  top: 800px;
-  left: 62%;
-  width: 160px;
+  top: 0px;
+  left: 1100px;
+  width: 110px;
   height: auto;
-transform:rotate(55deg);
+  transform: rotate(55deg);
   object-fit: contain;
 }
 
 .fleche-noir {
-position: absolute;
-  top: 600px;
+  position: absolute;
+  top: 650PX;
   left: 140px;
-transform: scaleX(-1) rotate(30deg);
-
+  transform: scaleX(-1) rotate(30deg);
   width: 120px;
   height: auto;
-
   object-fit: contain;
 }
+
 .about-image {
   position: relative;
   background: #111;
@@ -367,7 +355,7 @@ transform: scaleX(-1) rotate(30deg);
 .about-content {
   position: relative;
 }
-/* text */
+
 .about-label {
   display: inline-block;
   background: #ff5a00;
@@ -406,39 +394,19 @@ transform: scaleX(-1) rotate(30deg);
 
 .about-quote {
   position: absolute;
-  top: 700px;
-  left: 300px;
-
+  top: 730px;
+  left: 320px;
+  margin-top: 40px;
   width: 300px;
-
   font-size: 14px;
 }
-/* contact page -------------------- */ 
 
+/* projets page -------------------- */
 .projets-section {
-  overflow: visible;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #D8D8D8;
-}
-#projects {
   position: relative;
-  height: 300vh; 
-  overflow: visible;
-}
-
-/* robot */
-* {margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
-body {font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue' sans-serif ;
-
-color: #D8D8D8;
-min-height: 100vh;
-line-height: 1.5;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #D8D8D8;
 }
 
 .robot-card {
@@ -446,6 +414,7 @@ line-height: 1.5;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 60px;
 }
 
 .robot-card::before {
@@ -457,11 +426,8 @@ line-height: 1.5;
   filter: blur(70px);
   opacity: 0.45;
   z-index: 1;
+}
 
-}
-  .contact-section {
-  padding: 100px;
-}
 .robot-video {
   width: 400px;
   max-width: 100%;
@@ -470,236 +436,187 @@ line-height: 1.5;
   animation: float 4s ease-in-out infinite;
   position: relative;
   z-index: 2;
-  top:110Px;
+  top: 110px;
 }
 
-.robot-card {
-  position: relative;
-  padding: 60px; /* important pour laisser respirer le glow */
-}
-
-/* fin robot  */
-
-/* text robot   */
 .text-robot {
   position: absolute;
   top: 200px;
   left: 50%;
   transform: translateX(-50%);
-  color: #ff5a00;
+  color: #ff5900a0;
   opacity: 0.5;
-font-size:  200px;
-  line-height: 0.85;
-  font-weight: 900;
-  letter-spacing: -4px;
-  margin: 0 0 35px;}
-
-.robot-droite{
-  position: absolute;
-  top: 570px;
-  left: 66%;
-}
-.robot-gauche{
-  position: absolute;
-  top: 710px;
-  left: 37%;
-}
-.robot-centre{
-
-  position: absolute;
-  top: 230px;
-  left: 65%;
-}
-.orange-title3 {
- position: absolute;
-  top: 290px;
-  left: 20%;
-  transform: translateX(-50%) rotate(-90deg);
-  color: #000;
- 
-font-size: 150px;
+  font-size: clamp(90px, 12vw, 230px);
   line-height: 0.85;
   font-weight: 900;
   letter-spacing: -4px;
   margin: 0 0 35px;
 }
 
+.robot-droite {
+  position: absolute;
+  top: 570px;
+  left: 66%;
+}
 
-.title-langage-outils{
-position: absolute;
+.robot-gauche {
+  position: absolute;
+  top: 710px;
+  left: 37%;
+}
+
+.robot-centre {
+  position: absolute;
+  top: 230px;
+  left: 65%;
+}
+
+.orange-title3 {
+  position: absolute;
+  top: 290px;
+  left: 20%;
+  transform: translateX(-50%) rotate(-90deg);
+  color: #000;
+  font-size: clamp(80px, 8vw, 150px);
+  line-height: 0.85;
+  font-weight: 900;
+  letter-spacing: -4px;
+  margin: 0 0 35px;
+}
+
+.title-langage-outils {
+  position: absolute;
   top: 830px;
   left: 62%;
-  transform: translateX(-50%) ;
+  transform: translateX(-50%);
   color: #000;
- 
   text-align: center;
-font-size:130px;
+  font-size: clamp(130px, 7vw, 130px);
   line-height: 0.85;
   font-weight: 900;
   letter-spacing: -4px;
- margin: 0 0 35px;
-  
+  margin: 0 0 35px;
 }
-.title-langage-outils2{
-position: absolute;
-  z-index: 999;
+
+.title-langage-outils2 {
+  position: absolute;
+  z-index: 20;
   top: 1550px;
   left: 36%;
-  transform: translateX(-50%) ;
-  color: #ff59007a;
- 
-  
-font-size:130px;
+  transform: translateX(-50%);
+  color: #ff5900;
+  font-size: clamp(130px, 7vw, 130px);
   line-height: 0.85;
   font-weight: 900;
   letter-spacing: -4px;
- margin: 0 0 35px;
-  
+  margin: 0 0 35px;
 }
+
 .card {
-  width: 1200px;
+  width: min(1200px, 80%);
   min-height: 300px;
-
   position: absolute;
-  top: 1100px;
-  left: 10%;
-
+  top: 1110px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 35px;
-
   border-radius: 30px;
   background: #D8D8D8;
-
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-between;
+  justify-content: center;
   gap: 25px;
-
- 
 }
 
-/* CHAQUE BLOC */
-
 .card-content {
-  width: 120px;
-  height: 120px;
-
+  width: 130px;
+  height: 130px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   gap: 10px;
-
   border-radius: 22px;
-
-  background: rgba(255,255,255,0.25);
-
+  background: rgba(255, 255, 255, 0.25);
   box-shadow:
-    5px 5px 12px rgb(190,190,190),
-    -5px -5px 12px rgb(255,255,255);
-
+    5px 5px 12px rgb(190, 190, 190),
+    -5px -5px 12px rgb(255, 255, 255);
   transition: all 0.3s ease;
 }
 
-/* HOVER */
-
 .card-content:hover {
   transform: translateY(-8px);
-
   background: rgba(255, 90, 0, 0.12);
-
   border: 1px solid rgba(255, 90, 0, 0.3);
-
   box-shadow:
     0 0 18px rgba(255, 90, 0, 0.45),
-    8px 8px 18px rgb(170,170,170),
-    -8px -8px 18px rgb(255,255,255);
+    8px 8px 18px rgb(170, 170, 170),
+    -8px -8px 18px rgb(255, 255, 255);
 }
-
-/* IMAGES */
 
 .card-content img {
   width: 48px;
   height: 48px;
-
   object-fit: contain;
 }
 
-/* TEXTE */
-
 .card-content p {
   margin: 0;
-
   font-size: 14px;
   font-weight: 500;
-
   color: #111;
-
   text-transform: capitalize;
-
   opacity: 0.75;
 }
 
 .persona {
-position: absolute;
+  position: absolute;
   top: 880px;
-  left: 1150px;
-transform: scaleX(-1) ;
-
+  left: 78%;
+  transform: scaleX(-1);
   width: 230px;
   height: auto;
-
   object-fit: contain;
 }
+
 .coeur {
-position: absolute;
-  top: 780px;
-  left: 300px;
-transform: scaleX(-1) ;
-
+  position: absolute;
+  top: 750px;
+  left: 100px;
+  transform: scaleX(-1);
   width: 150px;
   height: auto;
-
   object-fit: contain;
 }
+
 .moi {
-position: absolute;
-z-index: 999;
+  position: absolute;
+  z-index: 20;
   top: 1590px;
-  left: 1020px;
-
-transform:  rotate(-10deg);
+  left: 70%;
+  transform: rotate(-10deg);
   width: 150px;
   height: auto;
-
   object-fit: contain;
 }
 
-
-
+/* slider projets */
 .travel-slider {
   position: absolute;
+  left: 0;
+  top: 1650px;
   width: 100%;
   height: 90vh;
   overflow: hidden;
   background: #D8D8D8;
   font-family: "Barlow Condensed", sans-serif;
-  margin-top: 3300px;
+  margin-top: 0;
 }
-
-
 
 @keyframes travelZoom {
-  from {
-    transform: scale(1.05);
-  }
-
-  to {
-    transform: scale(1.12);
-  }
+  from { transform: scale(1.05); }
+  to { transform: scale(1.12); }
 }
-
-
 
 .travel-hero {
   position: relative;
@@ -746,7 +663,7 @@ transform:  rotate(-10deg);
 }
 
 .travel-hero__button:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   transform: translateY(-3px);
 }
 
@@ -762,7 +679,7 @@ transform:  rotate(-10deg);
 
 .travel-slider-card {
   position: relative;
- width: 170px;
+  width: 170px;
   height: 240px;
   border-radius: 18px;
   overflow: hidden;
@@ -776,16 +693,14 @@ transform:  rotate(-10deg);
 }
 
 .travel-slider-card--active {
- width: 100%;
-max-width: 650px;
-height: auto;
+  width: min(650px, 42vw);
+  height: 420px;
 }
 
 .travel-slider-card__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
   animation: fadeImage 0.8s ease forwards;
 }
 
@@ -794,7 +709,6 @@ height: auto;
     opacity: 0;
     transform: scale(1.05);
   }
-
   to {
     opacity: 1;
     transform: scale(1);
@@ -804,11 +718,7 @@ height: auto;
 .travel-slider-card__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.85),
-    transparent
-  );
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
 }
 
 .travel-slider-card__content {
@@ -846,7 +756,7 @@ height: auto;
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   background: #D8D8D8;
   color: black;
   font-size: 1.3rem;
@@ -856,7 +766,7 @@ height: auto;
 
 .travel-slider-controls__button:hover {
   transform: scale(1.1);
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .travel-slider-progress {
@@ -865,8 +775,7 @@ height: auto;
   left: 25%;
   width: 50%;
   height: 3px;
-  background: rgba(255,255,255,0.1);
- 
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .travel-slider-progress__fill {
@@ -875,42 +784,6 @@ height: auto;
   transition: width 0.9s ease;
 }
 
-@media (max-width: 900px) {
-  .travel-slider-strip {
-    bottom: 30px;
-    top: auto;
-    transform: none;
-    left: 20px;
-    overflow-x: auto;
-    right: 20px;
-  }
-
-  .travel-slider-card {
-    width: 130px;
-    height: 190px;
-    animation: none;
-   
-  transition:
-    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-    width 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-    height 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-
- 
-  }
-
-  .travel-slider-card--active {
-    width: 160px;
-    height: 220px;
-  }
-
-  .travel-hero {
-    max-width: 80%;
-  }
-
-  .travel-hero__desc {
-    display: none;
-  }
-}
 .travel-slider-strip--right {
   animation: sliderEnterRight 0.45s ease both;
 }
@@ -939,16 +812,14 @@ height: auto;
     opacity: 1;
     transform: translateY(-50%) translateX(0);
   }
-
 }
 
-/* -----------------contact */
+/* contact ----------------- */
 .contact-section {
   position: relative;
   min-height: 100vh;
   padding: 80px 8%;
-  background:
-   #D8D8D8;
+  background: #D8D8D8;
   overflow: hidden;
 }
 
@@ -968,21 +839,12 @@ height: auto;
 .contact-title {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
   font-size: clamp(42px, 6vw, 70px);
   color: rgb(0, 0, 0);
   margin-bottom: 12px;
-
-  
 }
-
-
-
-.contact-title {
-  display: flex;
-  flex-direction: column;
-}
-
-
 
 .contact-container {
   position: relative;
@@ -990,7 +852,6 @@ height: auto;
   max-width: 1285px;
   width: 100%;
   margin: 60px auto 0;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 35px;
@@ -1008,22 +869,14 @@ height: auto;
   padding: 0 28px;
   border-radius: 22px;
   text-decoration: none;
-
   display: flex;
   align-items: center;
   gap: 22px;
-
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.08),
-    rgba(255, 255, 255, 0.03)
-  );
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
   border: 1px solid rgba(255, 255, 255, 0.12);
-
   box-shadow:
-    0 18px 40px rgba(0, 0, 0, 0.45),
+    0 18px 40px rgba(0, 0, 0, 0.25),
     inset 0 0 25px rgba(255, 255, 255, 0.04);
-
   transition: 0.3s ease;
   position: relative;
 }
@@ -1037,10 +890,8 @@ height: auto;
   width: 42px;
   height: 42px;
   object-fit: contain;
-
   padding: 13px;
   border-radius: 14px;
-
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.14);
 }
@@ -1060,35 +911,20 @@ height: auto;
   margin-bottom: 6px;
 }
 
-.contact-card:nth-child(1) p::before {
-  content: "LinkedIn";
-}
-
-.contact-card:nth-child(2) p::before {
-  content: "GitHub";
-  
-}
-
-.contact-card:nth-child(3) p::before {
-  content: "Email";
-}
-
-.contact-card:nth-child(4) p::before {
-  content: "Téléphone";
-}
+.contact-card:nth-child(1) p::before { content: "LinkedIn"; }
+.contact-card:nth-child(2) p::before { content: "GitHub"; }
+.contact-card:nth-child(3) p::before { content: "Email"; }
+.contact-card:nth-child(4) p::before { content: "Téléphone"; }
 
 .contact-card::after {
   content: "↗";
   margin-left: auto;
-
   width: 44px;
   height: 44px;
   border-radius: 50%;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   color: #ff5900b3;
   font-size: 20px;
   background: rgba(255, 255, 255, 0.12);
@@ -1097,12 +933,10 @@ height: auto;
 .contact-form-wrapper {
   padding: 16px;
   border-radius: 28px;
-
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
-
   box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.55),
+    0 20px 50px rgba(0, 0, 0, 0.25),
     inset 0 0 30px rgba(255, 255, 255, 0.04);
 }
 
@@ -1115,19 +949,15 @@ height: auto;
   width: 100%;
   border: none;
   outline: none;
-
   background: rgba(255, 255, 255, 0.06);
   color: rgb(0, 0, 0);
-
   border-radius: 18px;
   padding: 22px;
-
   font-size: 15px;
   margin-bottom: 21px;
-
   box-shadow:
     inset 0 0 18px rgba(255, 255, 255, 0.04),
-    0 5px 18px rgba(0, 0, 0, 0.35);
+    0 5px 18px rgba(0, 0, 0, 0.18);
 }
 
 .contact-form-wrapper textarea {
@@ -1145,12 +975,10 @@ height: auto;
   height: 68px;
   border: none;
   border-radius: 18px;
-
   background: #00000018;
   color: #111;
   font-size: 18px;
   font-weight: 700;
-
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -1170,11 +998,124 @@ height: auto;
   font-size: 14px;
 }
 
-/* Responsive */
+.text-md {
+  color: black;
+  margin: 3px 3px 18px;
+}
+
+/* button cv ---------- */
+.cv-button {
+  position: absolute;
+  top: -150px;
+  left: 250px;
+  padding: 14px 32px;
+  border-radius: 12px;
+  color: black;
+  background: #D8D8D8;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.cv-button::before,
+.cv-button::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #ff5a00;
+  transition: 0.5s;
+}
+
+.cv-button::before {
+  top: 0;
+  left: 0;
+}
+
+.cv-button::after {
+  bottom: 0;
+  right: 0;
+}
+
+.cv-button:hover::before,
+.cv-button:hover::after {
+  width: 100%;
+}
+
+.main {
+  position: absolute;
+  top: -100px;
+  left: 505px;
+  transform: scaleX(-1) rotate(30deg);
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+}
+
+.scream {
+  position: absolute;
+  top: -140px;
+  left: 76%;
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive desktop */
+@media (max-width: 1200px) {
+  .person {
+    left: 36%;
+    width: 520px;
+  }
+
+  .card {
+    width: 88%;
+  }
+
+  .travel-slider-card--active {
+    width: 450px;
+    height: 360px;
+  }
+}
 
 @media (max-width: 900px) {
   .contact-container {
     grid-template-columns: 1fr;
+  }
+
+  .travel-slider-strip {
+    bottom: 30px;
+    top: auto;
+    transform: none;
+    left: 20px;
+    overflow-x: auto;
+    right: 20px;
+  }
+
+  .travel-slider-card {
+    width: 130px;
+    height: 190px;
+    animation: none;
+    transition:
+      transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      width 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      height 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .travel-slider-card--active {
+    width: 160px;
+    height: 220px;
+  }
+
+  .travel-hero {
+    max-width: 80%;
+  }
+
+  .travel-hero__desc {
+    display: none;
   }
 }
 
@@ -1198,97 +1139,8 @@ height: auto;
   }
 }
 
-.text-md{
-  color: black;
-  margin: 3px 3px 18px;
-}
-
-/* --------button cv---------- */
-.cv-button {
-  position: absolute;
-top: -150px;
-left: 250px;
-  padding: 14px 32px;
-  border-radius: 12px;
-
-  color: black;
-  background: #D8D8D8;
-
-  font-size: 25px;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-
-  border: none;
-  cursor: pointer;
-
-  overflow: hidden;
-}
-
-.cv-button::before,
-.cv-button::after {
-  content: '';
-  position: absolute;
-
-  width: 0%;
-  height: 2px;
-
-  background: #ff5a00;
-  transition: 0.5s;
-}
-
-.cv-button::before {
-  top: 0;
-  left: 0;
-}
-
-.cv-button::after {
-  bottom: 100px;
-  right: 70%;
-}
-
-.cv-button:hover::before,
-.cv-button:hover::after {
-  width: 100%;
-}
-/* ----------------------- */
-
-.main{ 
-position: absolute;
-  top: -100px;
-  left: 505px;
-transform: scaleX(-1) rotate(30deg);
-
-  width: 70px;
-  height: auto;
-
-  object-fit: contain;
-}
-
-.scream{ 
-position: absolute;
-  top: -140px;
-  left: 1100px;
-
-  width: 300px;
-  height: auto;
-
-  object-fit: contain;
-}
-
-@media (max-width: 768px) {
-
-  .desktop-version {
-    display: block;
-  }
-
-  .mobile-version {
-    display: none;
-  }
-}
-
 /* MOBILE */
 @media (max-width: 768px) {
-
   .desktop-version {
     display: none;
   }
@@ -1439,5 +1291,3 @@ position: absolute;
   font-size: 18px;
   font-weight: 700;
 }
-
-
