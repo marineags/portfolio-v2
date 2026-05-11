@@ -73,7 +73,7 @@ body {
 .barcode {
   position: absolute;
   top: 0;
-  right: 75%;
+  right: 80%;
   width: 200px;
   height: 250px;
   z-index: 10;
@@ -504,7 +504,7 @@ body {
   top: 1550px;
   left: 36%;
   transform: translateX(-50%);
-  color: #ff5900;
+  color: #ff59004e;
   font-size: clamp(130px, 7vw, 130px);
   line-height: 0.85;
   font-weight: 900;
