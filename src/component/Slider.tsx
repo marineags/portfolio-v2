@@ -1,4 +1,8 @@
 import { useEffect, useState } from "react";
+import dataviz from "../images/dataviz.png";
+import quizzy from "../images/quizzy.png";
+import adaopte from "../images/ADAOPTE.png";
+import exoFlexbox from "../images/Capture d’écran 2026-05-07 à 15.40.35.png";
 
 type Destination = {
   region: string;
@@ -13,33 +17,28 @@ const destinations: Destination[] = [
     region: "HTML, CSS, JavaScript, Typescript",
     title: "DATAVIZ",
     desc: "DataViz est une application interactive de visualisation de données permettant d’explorer des statistiques et graphiques de façon claire et moderne.",
-    image:
-      "./images/dataviz.png",
+    image: dataviz,
     link: "https://dataviz-navy.vercel.app",
   },
   {
     region: "HTML, CSS, JavaScript",
     title: "QUIZZY",
-    desc: "Quizy est une application de quiz interactive et ludique permettant de tester ses connaissances à travers différentes questions dans une interface moderne et dynamique.",
-    image:
-      "./images/quizzy.png",
+    desc: "Quizy est une application de quiz interactive et ludique permettant de tester ses connaissances.",
+    image: quizzy,
     link: "https://quizz-pi-plum.vercel.app",
   },
   {
     region: "HTML, CSS, JavaScript, TypeScript, React",
     title: "ADAOPTE",
-    desc: "Adaopte est une application web dédiée à l’adoption d’animaux, permettant de découvrir différents profils d’animaux dans une interface moderne, intuitive et pensée pour faciliter les rencontres entre futurs adoptants et refuges.",
-    image:
-      "./images/ADAOPTE.png",
+    desc: "Adaopte est une application web dédiée à l’adoption d’animaux.",
+    image: adaopte,
     link: "https://adaopte-tau.vercel.app",
   },
-  
   {
     region: "HTML, CSS",
     title: "EXO FLEXBOX",
-    desc: "Cette application est un exercice de développement front-end mettant en avant la création d’un affichage interactif et dynamique avec une interface moderne et responsive, conçu pour pratiquer la logique et l’intégration web.",
-    image:
-      "./images/Capture d’écran 2026-05-07 à 15.40.35.png",
+    desc: "Exercice front-end autour de Flexbox et de l’intégration web.",
+    image: exoFlexbox,
     link: "https://exercice-1-produire-un-affichage-en.vercel.app",
   },
 ];
