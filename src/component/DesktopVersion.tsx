@@ -109,9 +109,9 @@ L’évolution constante de ce secteur correspond pleinement à mon envie de dé
       </p>
 
       <p className="text about-quote">
-              Enfaite...<br />
-              c'est pas vraiment moi,<br />
-              c'est une image generer par une IA à partir de mes photos, mais ça me ressemble pas mal quand même non ?
+              En faite...<br />
+              ce n'est pas vraiment moi,<br />
+              c'est une image générée par une IA à partir de mes photos, mais ça me ressemble pas mal quand même, non ?
             </p>
 
     <img className="fleche-noir" src={flecheNoir} alt="Portrait Marine" />
