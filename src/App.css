@@ -1140,7 +1140,7 @@ body {
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
   .desktop-version {
     display: none;
   }
@@ -1171,7 +1171,21 @@ body {
   position: relative;
   overflow: hidden;
 }
-
+.barcode-mobile {
+  position: absolute;
+  top: 0;
+  right: 70%;
+  width: 120px;
+  height: 130px;
+  z-index: 10;
+  background: repeating-linear-gradient(
+    to right,
+    #111 0,
+    #111 4px,
+    transparent 3px,
+    transparent 5px
+  );
+}
 .home-mobile-topline {
   position: absolute;
   top: 70px;
@@ -1205,6 +1219,7 @@ body {
   line-height: 0.9;
   font-weight: 900;
   color: #111;
+ 
 }
 
 .home-mobile-title span {
@@ -1215,6 +1230,23 @@ body {
   margin-top: 22px;
   max-width: 320px;
   color: rgba(0, 0, 0, 0.7);
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+}
+.home-mobile-text-techno {
+  margin-top: 22px;
+  max-width: 320px;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.home-mobile-text-orange {
+ margin-top: 22px;
+  max-width: 320px;
+  color: #ff5a00;
   font-size: 16px;
   line-height: 1.6;
 }
