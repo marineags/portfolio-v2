@@ -252,7 +252,7 @@ Elle m’aide à apprendre plus vite, explorer de nouvelles idées <br/>et dépa
             rel="noreferrer"
             className="contact-card"
           >
-            <img src="/icons/icons8-linkedin-50.png" alt="LinkedIn" />
+            
             <p>marine-agasse-dev</p>
           </a>
 
@@ -262,17 +262,17 @@ Elle m’aide à apprendre plus vite, explorer de nouvelles idées <br/>et dépa
             rel="noreferrer"
             className="contact-card"
           >
-            <img src="/icons/icons8-github-50.png" alt="GitHub" />
+            
             <p>marineags</p>
           </a>
 
           <a href="mailto:marine.agse@gmail.com" className="contact-card">
-            <img src="/icons/icons8-mail-48.png" alt="Email" />
+            
             <p>marine.agse@gmail.com</p>
           </a>
 
           <a href="tel:+33638829826" className="contact-card">
-            <img src="/icons/icons8-telephone-50.png" alt="Téléphone" />
+            
             <p>06 38 82 98 26</p>
           </a>
         </div>

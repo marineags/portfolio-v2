@@ -336,7 +336,7 @@ body {
 
 .fleche-noir {
   position: absolute;
-  top: 650PX;
+  top: 720px;
   left: 140px;
   transform: scaleX(-1) rotate(30deg);
   width: 120px;
@@ -399,7 +399,7 @@ body {
 
 .about-quote {
   position: absolute;
-  top: 730px;
+  top: 790px;
   left: 320px;
   margin-top: 40px;
   width: 300px;
