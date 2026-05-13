@@ -129,8 +129,8 @@ body {
 
 .text2 {
   position: absolute;
-  top: 110svh;
-  left: 170px;
+  top: 900px;
+  left: 120px;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.2;
@@ -152,6 +152,11 @@ body {
 .text-right {
   top: 170px;
   right: 150px;
+}
+
+.marge-top {
+  margin-top: 18px;
+  color: #cb5500;
 }
 
 .small-title {

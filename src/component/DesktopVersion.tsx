@@ -103,9 +103,11 @@ J’ai découvert le développement web, un domaine dans lequel je me suis rapid
 L’évolution constante de ce secteur correspond pleinement à mon envie de développer de nouvelles compétences.
       </p>
 
-      <p className="about-text small">
+      <p className="about-text small marge-top">
         Actuellement, je recherche une alternance à partir de septembre 2026
         pour continuer à apprendre sur des projets concrets.
+        <br/>
+        Rythme : 4 jours en entreprise / 1 jour en formation (vendredi)
       </p>
 
       <p className="text about-quote">
@@ -223,6 +225,8 @@ Elle m’aide à apprendre plus vite, explorer de nouvelles idées <br/>et dépa
 
 <p className="text2">
            Ce que j’aime dans le développement,<br/> c’est que les langages et les outils évoluent <br/>sans cesse,il y a toujours quelque chose<br/> de nouveau à apprendre.
+           <br/>
+           <br/>Curieuse et motivée,<br/> je suis également prête à me former d’ici septembre <br/>aux technologies utilisées au sein de votre entreprise <br/>afin d’arriver avec de bonnes bases <br/>et de pouvoir m’intégrer rapidement à vos projets. 
             </p>
 <img className="persona" src={persona} alt="Portrait Marine" />
 <img className="coeur" src={coeur} alt="Portrait Marine" />
